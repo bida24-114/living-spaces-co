@@ -6,110 +6,99 @@
     <title>Living Spaces Co. - Product</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        /* General Styles (from previous examples) */
+        /* General Styles */
         body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             color: #333;
-            background: #f8f8f8;
+            background: #f8f8f8; /* Light Beige Background */
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
-
         header {
-            background: #fff;
+            background: #f5f5f5; /* Slightly darker Beige for header */
             padding: 20px;
             text-align: center;
         }
-
-        .logo {
-            max-width: 200px;
-            height: auto;
+        .hero-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #4b4b4b; /* Darker Beige for text contrast */
         }
-
         nav {
-            background: #fff;
+            background: #f5f5f5; /* Slightly darker Beige for navigation */
             padding: 10px;
             text-align: center;
         }
-
         nav a {
-            color: #333;
+            color: #4b4b4b; /* Darker Beige for text contrast */
             text-decoration: none;
             margin: 0 15px;
             font-weight: 500;
             transition: color 0.3s;
         }
-
         nav a:hover {
-            color: #d3b897;
+            color: #d3b897; /* Accent color */
         }
-
         main {
             flex: 1;
             padding: 40px;
         }
-
         footer {
-            background: #fff;
+            background: #f5f5f5; /* Slightly darker Beige for footer */
             padding: 20px;
             text-align: center;
+            color: #4b4b4b; /* Darker Beige for text contrast */
         }
-
         /* Product Page Specific Styles */
         .product-page {
             padding: 40px;
             text-align: center;
         }
-
         .product-category {
             margin-bottom: 40px;
         }
-
         .product-category h2 {
             font-family: 'Playfair Display', serif;
             font-size: 2em;
             margin-bottom: 20px;
+            color: #4b4b4b; /* Darker Beige for text contrast */
         }
-
         .product-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
+            background-color: #f9f9f9; /* Light Beige Background for product grid */ 
         }
-
         .product {
             width: 300px;
-            border: 1px solid #ddd;
+            border: 1px solid #e0e0e0; /* Light Beige Border */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-            background-color: white;
-            text-align: left; /* Align text to the left */
+            background-color: #fff; /* White for product cards */
         }
-
         .product img {
             max-width: 100%;
             height: auto;
             margin-bottom: 10px;
         }
-
         .product h3 {
             margin-top: 0;
+            color: #4b4b4b; /* Darker Beige for text contrast */
         }
-
         .product-description {
             margin-top: 10px;
+            color: #4b4b4b; /* Darker Beige for text contrast */
         }
-
-        .product-price { /* Style for the price */
+        .product-price {
             font-weight: bold;
             margin-top: 10px;
-            color: #d3b897; /* Use your accent color */
+            color: #d3b897; /* Accent color */
         }
-
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .product {
@@ -121,61 +110,222 @@
 </head>
 <body>
     <header>
-        <img src="your_logo.png" alt="Living Spaces Co. Logo" class="logo">
+        <h1 class="hero-text">Discover Your Dream Home</h1>
     </header>
-
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About Us</a>
         <a href="product.html">Product</a>
         <a href="reviews.html">Customer Reviews</a>
     </nav>
-
     <main>
         <section class="product-page">
             <h1>Our Products</h1>
 
             <div class="product-category">
-                <h2>Furniture</h2>
-                <div class="product-grid">
+                <h2>Kitchen & Dining Room</h2>
+                <div class="product-grid"> 
                     <div class="product">
-                        <img src="path/to/furniture1.jpg" alt="Furniture 1">
-                        <h3>[Furniture Name 1]</h3>
-                        <p class="product-description">[Short description of furniture 1]</p>
-                        <p class="product-price">[Price of furniture 1]</p>
+                        <img src="path/to/kitchen_dining_1.jpg" alt="Kitchen & Dining Room 1">
+                        <h3>[Kitchen & Dining Room Name 1]</h3>
+                        <p class="product-description">[Short description of Kitchen & Dining Room 1]</p>
+                        <p class="product-price">[Price of Kitchen & Dining Room 1]</p>
                     </div>
                     <div class="product">
-                        <img src="path/to/furniture2.jpg" alt="Furniture 2">
-                        <h3>[Furniture Name 2]</h3>
-                        <p class="product-description">[Short description of furniture 2]</p>
-                        <p class="product-price">[Price of furniture 2]</p>
-                    </div>
-                    </div>
-            </div>
-
-            <div class="product-category">
-                <h2>Decor</h2>
-                <div class="product-grid">
-                    <div class="product">
-                        <img src="path/to/decor1.jpg" alt="Decor 1">
-                        <h3>[Decor Name 1]</h3>
-                        <p class="product-description">[Short description of decor 1]</p>
-                        <p class="product-price">[Price of decor 1]</p>
+                        <img src="path/to/kitchen_dining_2.jpg" alt="Kitchen & Dining Room 2">
+                        <h3>[Kitchen & Dining Room Name 2]</h3>
+                        <p class="product-description">[Short description of Kitchen & Dining Room 2]</p>
+                        <p class="product-price">[Price of Kitchen & Dining Room 2]</p>
                     </div>
                     <div class="product">
-                        <img src="path/to/decor2.jpg" alt="Decor 2">
-                        <h3>[Decor Name 2]</h3>
-                        <p class="product-description">[Short description of decor 2]</p>
-                        <p class="product-price">[Price of decor 2]</p>
+                        <img src="path/to/kitchen_dining_3.jpg" alt="Kitchen & Dining Room 3">
+                        <h3>[Kitchen & Dining Room Name 3]</h3>
+                        <p class="product-description">[Short description of Kitchen & Dining Room 3]</p>
+                        <p class="product-price">[Price of Kitchen & Dining Room 3]</p>
+                    </div>
+                    <div class="product">
+                        <img src="path/to/kitchen_dining_4.jpg" alt="Kitchen & Dining Room 4">
+                        <h3>[Kitchen & Dining Room Name 4]</h3>
+                        <p class="product-description">[Short description of Kitchen & Dining Room 4]</p>
+                        <p class="product-price">[Price of Kitchen & Dining Room 4]</p>
+                    </div>
+                    <div class="product">
+                        <img src="path/to/kitchen_dining_5.jpg" alt="Kitchen & Dining Room 5">
+                        <h3>[Kitchen & Dining Room Name 5]</h3>
+                        <p class="product-description">[Short description of Kitchen & Dining Room 5]</p>
+                        <p class="product-price">[Price of Kitchen & Dining Room 5]</p>
+                    </div>
+                    <div class="product">
+                        <img src="path/to/kitchen_dining_6.jpg" alt="Kitchen & Dining Room 6">
+                        <h3>[Kitchen & Dining Room Name 6]</h3>
+                        <p class="product-description">[Short description of Kitchen & Dining Room 6]</p>
+                        <p class="product-price">[Price of Kitchen & Dining Room 6]</p>
                     </div>
                 </div>
             </div>
 
-            </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Living Spaces Co.</p>
-    </footer>
-</body>
-</html>
+            <div class="product-category">
+                <h2>Living Room</h2>
+                <div class="product-grid"> 
+                    <div class="product">
+                        <img src="path/to/home_decor_1.jpg" alt="Home Decor 1">
+                        <h3>[Living Room 1]</h3>
+                        <p class="product-description">[Short description of Home Decor 1]</p>
+                        <p class="product-price">[Price of Home Decor 1]</p>
+                    </div>
+                    <div class="product">
+                        <img src="path/to/home_decor_2.jpg" alt="Home Decor 2">
+                        <h3>[Home Decor Name 2]</h3>
+                        <p class="product-description">[Short description of Home Decor 2]</p>
+                        <p class="product-price">[Price of Home Decor 2]</p
+                      </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_3.jpg" alt="Home Decor 3">
+                        <h3>[Home Decor Name 3]</h3>
+                        <p class="product-description">[Short description of Home Decor 3]</p>
+                        <p class="product-price">[Price of Home Decor 3]</p>
+                    </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_4.jpg" alt="Home Decor 4">
+                        <h3>[Home Decor Name 4]</h3>
+                        <p class="product-description">[Short description of Home Decor 4]</p>
+                        <p class="product-price">[Price of Home Decor 4]</p>
+                    </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_5.jpg" alt="Home Decor 5">
+                        <h3>[Home Decor Name 5]</h3>
+                        <p class="product-description">[Short description of Home Decor 5]</p>
+                        <p class="product-price">[Price of Home Decor 5]</p>
+                    </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_6.jpg" alt="Home Decor 6">
+                        <h3>[Home Decor Name 6]</h3>
+                        <p class="product-description">[Short description of Home Decor 6]</p>
+                        <p class="product-price">[Price of Home Decor 6]</p>
+                    </div>
+                </div>
+            </div>
+       <div class="product-category">
+                <h2>Bedroom</h2>
+                <div class="product-grid"> 
+                    <div class="product">
+                        <img src="path/to/home_decor_1.jpg" alt="Home Decor 1">
+                        <h3>[Home Decor Name 1]</h3>
+                        <p class="product-description">[Short description of Home Decor 1]</p>
+                        <p class="product-price">[Price of Home Decor 1]</p>
+                    </div>
+                    <div class="product">
+                        <img src="path/to/home_decor_2.jpg" alt="Home Decor 2">
+                        <h3>[Home Decor Name 2]</h3>
+                        <p class="product-description">[Short description of Home Decor 2]</p>
+                        <p class="product-price">[Price of Home Decor 2]</p
+                      </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_3.jpg" alt="Home Decor 3">
+                        <h3>[Home Decor Name 3]</h3>
+                        <p class="product-description">[Short description of Home Decor 3]</p>
+                        <p class="product-price">[Price of Home Decor 3]</p>
+                    </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_4.jpg" alt="Home Decor 4">
+                        <h3>[Home Decor Name 4]</h3>
+                        <p class="product-description">[Short description of Home Decor 4]</p>
+                        <p class="product-price">[Price of Home Decor 4]</p>
+                    </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_5.jpg" alt="Home Decor 5">
+                        <h3>[Home Decor Name 5]</h3>
+                        <p class="product-description">[Short description of Home Decor 5]</p>
+                        <p class="product-price">[Price of Home Decor 5]</p>
+                    </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_6.jpg" alt="Home Decor 6">
+                        <h3>[Home Decor Name 6]</h3>
+                        <p class="product-description">[Short description of Home Decor 6]</p>
+                        <p class="product-price">[Price of Home Decor 6]</p>
+                    </div>
+                </div>
+        </div>
+              <div class="product-category">
+                <h2>Bathroom</h2>
+                <div class="product-grid"> 
+                    <div class="product">
+                        <img src="path/to/home_decor_1.jpg" alt="Home Decor 1">
+                        <h3>[Home Decor Name 1]</h3>
+                        <p class="product-description">[Short description of Home Decor 1]</p>
+                        <p class="product-price">[Price of Home Decor 1]</p>
+                    </div>
+                    <div class="product">
+                        <img src="path/to/home_decor_2.jpg" alt="Home Decor 2">
+                        <h3>[Home Decor Name 2]</h3>
+                        <p class="product-description">[Short description of Home Decor 2]</p>
+                        <p class="product-price">[Price of Home Decor 2]</p
+                      </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_3.jpg" alt="Home Decor 3">
+                        <h3>[Home Decor Name 3]</h3>
+                        <p class="product-description">[Short description of Home Decor 3]</p>
+                        <p class="product-price">[Price of Home Decor 3]</p>
+                    </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_4.jpg" alt="Home Decor 4">
+                        <h3>[Home Decor Name 4]</h3>
+                        <p class="product-description">[Short description of Home Decor 4]</p>
+                        <p class="product-price">[Price of Home Decor 4]</p>
+                    </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_5.jpg" alt="Home Decor 5">
+                        <h3>[Home Decor Name 5]</h3>
+                        <p class="product-description">[Short description of Home Decor 5]</p>
+                        <p class="product-price">[Price of Home Decor 5]</p>
+                    </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_6.jpg" alt="Home Decor 6">
+                        <h3>[Home Decor Name 6]</h3>
+                        <p class="product-description">[Short description of Home Decor 6]</p>
+                        <p class="product-price">[Price of Home Decor 6]</p>
+                    </div>
+                </div>
+        </div>
+              <div class="product-category">
+                <h2>Home Decor</h2>
+                <div class="product-grid"> 
+                    <div class="product">
+                        <img src="path/to/home_decor_1.jpg" alt="Home Decor 1">
+                        <h3>[Home Decor Name 1]</h3>
+                        <p class="product-description">[Short description of Home Decor 1]</p>
+                        <p class="product-price">[Price of Home Decor 1]</p>
+                    </div>
+                    <div class="product">
+                        <img src="path/to/home_decor_2.jpg" alt="Home Decor 2">
+                        <h3>[Home Decor Name 2]</h3>
+                        <p class="product-description">[Short description of Home Decor 2]</p>
+                        <p class="product-price">[Price of Home Decor 2]</p
+                      </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_3.jpg" alt="Home Decor 3">
+                        <h3>[Home Decor Name 3]</h3>
+                        <p class="product-description">[Short description of Home Decor 3]</p>
+                        <p class="product-price">[Price of Home Decor 3]</p>
+                    </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_4.jpg" alt="Home Decor 4">
+                        <h3>[Home Decor Name 4]</h3>
+                        <p class="product-description">[Short description of Home Decor 4]</p>
+                        <p class="product-price">[Price of Home Decor 4]</p>
+                    </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_5.jpg" alt="Home Decor 5">
+                        <h3>[Home Decor Name 5]</h3>
+                        <p class="product-description">[Short description of Home Decor 5]</p>
+                        <p class="product-price">[Price of Home Decor 5]</p>
+                    </div>
+                      <div class="product">
+                        <img src="path/to/home_decor_6.jpg" alt="Home Decor 6">
+                        <h3>[Home Decor Name 6]</h3>
+                        <p class="product-description">[Short description of Home Decor 6]</p>
+                        <p class="product-price">[Price of Home Decor 6]</p>
+                    </div>
+                </div>
+        </div>
+                
