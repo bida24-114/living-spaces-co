@@ -3,138 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Living Spaces Co.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>About Us - Living Spaces Co.</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
+            font-family: sans-serif;
             margin: 0;
             color: #333;
-            background: #f8f8f8; /* Softer background */
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Ensure footer sticks to bottom */
+            background: #f5f5dc;
         }
 
-        header {
-            background: #fff;
+        header, nav, section, footer {
+            background-color: #ffffff;
             padding: 20px;
-            text-align: center; /* Center the logo */
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
         }
 
-        .logo {
-            max-width: 200px; /* Adjust as needed */
-            height: auto;
-        }
-
-        nav {
-            background: #fff;
+        header h1 {
+            background-color: #f0e6d2;
             padding: 10px;
-            text-align: center;
+            border-radius: 5px;
         }
 
         nav a {
             color: #333;
-            text-decoration: none;
-            margin: 0 15px; /* Spacing between links */
-            font-weight: 500;
-            transition: color 0.3s;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
         }
 
         nav a:hover {
-            color: #d3b897; /* Match the hover color */
+            background-color: #d3b897;
+            color: white;
         }
 
-        main {
-            flex: 1; /* Allow main content to take up available space */
-            padding: 40px;
-            display: flex;
-            align-items: center; /* Vertically center content */
-            justify-content: center; /* Horizontally center content */
+        /* Styles specific to the About Us page */
+        .about-content {
+            padding: 20px;
         }
 
-        .hero {
-            display: flex;
-            width: 80%; /* Adjust width as needed */
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            overflow: hidden; /* Ensure image stays within container */
+        .about-content h2 {
+            margin-bottom: 10px;
         }
 
-        .hero-text {
-            flex: 1;
-            padding: 40px;
-        }
-
-        .hero-text h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3em;
-            margin-bottom: 20px;
-            color: #2c3e50; /* Darker heading color */
-        }
-
-        .hero-text p {
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-
-        .hero-image {
-            flex: 1;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: auto;
-            display: block; /* Prevent small space below image */
-            object-fit: cover; /* Cover the entire area */
+        .about-content p {
+            line-height: 1.6; /* Improve readability */
+            margin-bottom: 15px;
         }
 
         footer {
-            background: #fff;
-            padding: 20px;
             text-align: center;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column; /* Stack on smaller screens */
-            }
-
-            .hero-text {
-                padding: 20px;
-            }
-
-            .hero-text h1 {
-                font-size: 2em;
-            }
+            padding: 15px;
+            background: #f0e6d2;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="your_logo.png" alt="Living Spaces Co. Logo" class="logo">
+        <h1>LIVING SPACES CO.</h1>
+        <div class="tagline">WHERE COMFORT MEETS STYLE</div>
     </header>
 
     <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="product.html">Product</a>
-        <a href="reviews.html">Customer Reviews</a>
-    </nav>
+        <a href="index.html">Home</a>  <a href="about.html">About Us</a>
+        <a href="product.html">Product</a> <a href="reviews.html">Customer Reviews</a> </nav>
 
-    <main>
-        <div class="hero">
-            <div class="hero-text">
-                <h1>Consciously Crafted</h1>
-                <p>Living Spaces Co. offers a curated collection of furniture and home decor designed to blend comfort and style. Discover a range of sofas and seating, bedroom furniture, lighting solutions, soft furnishings like cushions and throws, and unique home accessories to complete your living space. We strive to provide pieces that inspire you to create a home you love.</p>
-            </div>
-            <div class="hero-image">
-                <img src="path/to/your/image.jpg" alt="Hero Image">
-            </div>
-        </div>
-    </main>
+    <section class="about-content">
+        <h2>About Us</h2>
+
+        <p>Welcome to Living Spaces Co., where we believe that your home should be a reflection of your unique style and a sanctuary of comfort.  We curate a collection of high-quality furniture, decor, and homeware designed to inspire you to create a space you truly love.</p>
+
+        <p>Our journey began with a passion for bringing together beautiful, functional, and ethically sourced pieces. We work closely with skilled artisans and designers to ensure that every item in our collection meets our high standards of quality and craftsmanship.</p>
+
+        <p>At Living Spaces Co., we're more than just a home goods store. We're a team of dedicated individuals who are passionate about helping you transform your house into a home.  We strive to provide exceptional customer service and create a welcoming and inspiring shopping experience.</p>
+
+        <p>We believe that everyone deserves to live in a space that makes them feel happy and at peace.  Whether you're looking for a statement piece of furniture, a cozy throw blanket, or the perfect finishing touch for your living room, we're confident you'll find something you love at Living Spaces Co.</p>
+
+        <p>Thank you for choosing Living Spaces Co. We're excited to be a part of your home decorating journey!</p>
+
+       </section>
 
     <footer>
         <p>&copy; 2025 Living Spaces Co.</p>
