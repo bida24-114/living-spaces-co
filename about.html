@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Living Spaces Co.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            color: #333;
+            background: #f8f8f8; /* Softer background */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure footer sticks to bottom */
+        }
+
+        header {
+            background: #fff;
+            padding: 20px;
+            text-align: center; /* Center the logo */
+        }
+
+        .logo {
+            max-width: 200px; /* Adjust as needed */
+            height: auto;
+        }
+
+        nav {
+            background: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px; /* Spacing between links */
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #d3b897; /* Match the hover color */
+        }
+
+        main {
+            flex: 1; /* Allow main content to take up available space */
+            padding: 40px;
+            display: flex;
+            align-items: center; /* Vertically center content */
+            justify-content: center; /* Horizontally center content */
+        }
+
+        .hero {
+            display: flex;
+            width: 80%; /* Adjust width as needed */
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden; /* Ensure image stays within container */
+        }
+
+        .hero-text {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #2c3e50; /* Darker heading color */
+        }
+
+        .hero-text p {
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            flex: 1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block; /* Prevent small space below image */
+            object-fit: cover; /* Cover the entire area */
+        }
+
+        footer {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column; /* Stack on smaller screens */
+            }
+
+            .hero-text {
+                padding: 20px;
+            }
+
+            .hero-text h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="your_logo.png" alt="Living Spaces Co. Logo" class="logo">
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="product.html">Product</a>
+        <a href="reviews.html">Customer Reviews</a>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Consciously Crafted</h1>
+                <p>Living Spaces Co. offers a curated collection of furniture and home decor designed to blend comfort and style. Discover a range of sofas and seating, bedroom furniture, lighting solutions, soft furnishings like cushions and throws, and unique home accessories to complete your living space. We strive to provide pieces that inspire you to create a home you love.</p>
+            </div>
+            <div class="hero-image">
+                <img src="path/to/your/image.jpg" alt="Hero Image">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Living Spaces Co.</p>
+    </footer>
+</body>
+</html>
