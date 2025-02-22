@@ -16,66 +16,59 @@
             flex-direction: column;
             min-height: 100vh;
         }
-
         header {
-            background: #fff;
+            background: #f5f5f5; /* Changed to match the previous aesthetic */
             padding: 20px;
             text-align: center;
         }
-
-        .logo {
-            max-width: 200px;
-            height: auto;
+        .hero-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #4b4b4b;
         }
-
         nav {
-            background: #fff;
+            background: #f5f5f5; /* Changed to match the previous aesthetic */
             padding: 10px;
             text-align: center;
         }
-
         nav a {
-            color: #333;
+            color: #4b4b4b; /* Changed to match the previous aesthetic */
             text-decoration: none;
             margin: 0 15px;
             font-weight: 500;
             transition: color 0.3s;
         }
-
         nav a:hover {
             color: #d3b897;
         }
-
         main {
             flex: 1;
             padding: 40px;
         }
-
         footer {
-            background: #fff;
+            background: #f5f5f5; /* Changed to match the previous aesthetic */
             padding: 20px;
             text-align: center;
+            color: #4b4b4b; /* Changed to match the previous aesthetic */
         }
-
         /* Reviews Page Specific Styles */
         .reviews-page {
             padding: 40px;
             text-align: center;
         }
-
         .reviews-page h1 {
             font-family: 'Playfair Display', serif;
             font-size: 2.5em;
             margin-bottom: 40px;
+            color: #4b4b4b; /* Changed to match the previous aesthetic */
         }
-
         .review-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 40px;
         }
-
         .review {
             width: 350px;
             border: none;
@@ -85,38 +78,33 @@
             border-radius: 8px;
             overflow: hidden;
         }
-
         .review img {
             width: 100%;
             height: auto;
             display: block;
         }
-
         .review-content {
             padding: 20px;
             text-align: left;
         }
-
         .review h3 {
             margin-top: 0;
             font-family: 'Playfair Display', serif;
             font-size: 1.2em;
             margin-bottom: 10px;
+            color: #4b4b4b; /* Changed to match the previous aesthetic */
         }
-
         .review .rating {
             color: #f39c12;
             margin-bottom: 10px;
         }
-
         .review .rating span {
             font-size: 1.2em;
         }
-
         .review .review-text {
             line-height: 1.6;
+            color: #4b4b4b; /* Changed to match the previous aesthetic */
         }
-
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .review {
@@ -128,9 +116,8 @@
 </head>
 <body>
     <header>
-        <img src="your_logo.png" alt="Living Spaces Co. Logo" class="logo">
+        <h1 class="hero-text">Discover Your Dream Home</h1>
     </header>
-
     <nav>
         <a href="index.html">Home</a>
         <a href="product.html">Product</a>
@@ -138,11 +125,9 @@
         <a href="contact.html">Contact Us</a>
         <a href="reviews.html">Customer Reviews</a>
     </nav>
-
     <main>
         <section class="reviews-page">
             <h1>Loved by Homeowners</h1>
-
             <div class="review-grid">
                 <div class="review">
                     <img src="rev2.jpg" alt="Reviewer 1">
@@ -158,7 +143,6 @@
                         <p class="review-text">"Meals with my family are always extra special because of the beautiful plates I got from Custom & Nooke."</p>
                     </div>
                 </div>
-
                 <div class="review">
                     <img src="rev1.jpg" alt="Reviewer 2">
                     <div class="review-content">
@@ -173,7 +157,6 @@
                         <p class="review-text">"Very pleased with my new sofa the quality is great, it's comfortable, and elevates the look of my home."</p>
                     </div>
                 </div>
-
                 <div class="review">
                     <img src="rev3.jpg" alt="Reviewer 3">
                     <div class="review-content">
@@ -188,13 +171,12 @@
                         <p class="review-text">"I love how timeless my decor are. I just need to move things around to update the look of my space."</p>
                     </div>
                 </div>
-            </div> </section>
+            </div>
+        </section>
     </main>
-
     <footer>
         <p>&copy; 2025 Living Spaces Co.</p>
     </footer>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </body>
 </html>
