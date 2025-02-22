@@ -4,109 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | LIVING SPACES CO.</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            color: #333;
+            background: #f8f8f8; /* Light Beige Background */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background: #f5f5f5; /* Slightly darker Beige for header */
+            padding: 20px;
+            text-align: center;
+        }
+        .hero-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #4b4b4b; /* Darker Beige for text contrast */
+        }
+        nav {
+            background: #f5f5f5; /* Slightly darker Beige for navigation */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #4b4b4b; /* Darker Beige for text contrast */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #d3b897; /* Accent color */
+        }
+        main {
+            flex: 1;
+            padding: 40px;
+            text-align: center;
+        }
+        footer {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            color: #4b4b4b;
+        }
+        .hero-image {
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            position: relative;
+        }
+        .hero-text-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+        .hero-text-overlay h1 {
+            font-size: 6rem;
+            margin-bottom: 2rem;
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
 </head>
 <body>
-
     <header>
-        <div class="header-content">
-            <h1>Discover Your Dream Home</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="product.html">Shop</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="product.html">Product</a></li>
-                    <li><a href="reviews.html">Customer Reviews</a></li>
-                </ul>
-            </nav>
-        </div>
+        <h1 class="hero-text">Discover Your Dream Home</h1>
     </header>
-
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html">Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="product.html">Product</a>
+        <a href="reviews.html">Customer Reviews</a>
+    </nav>
     <main>
         <section id="hero">
             <img src="home.jpg" alt="Living Room Interior" class="hero-image">
-            <div class="hero-text">
-                <h1 class="large-heading">LIVING SPACES CO.</h1> 
+            <div class="hero-text-overlay">
+                <h1>LIVING SPACES CO.</h1>
             </div>
         </section>
     </main>
-
     <footer>
         <p>&copy; 2025 Living Spaces Co.</p>
     </footer>
 </body>
 </html>
-
-<style>
-body {
-    font-family: 'Playfair Display', serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5dc;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-header {
-    background-color: white;
-    color: #333;
-    padding: 1rem;
-    text-align: center;
-}.header-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav li {
-    margin: 0 1rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    padding: 0.5rem 1rem;
-    border-radius: 3px;
-}
-
-nav a:hover {
-    background-color: #555;
-    color: #fff;
-}.hero-image {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover;
-    position: relative;
-}.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: #fff;
-    z-index: 1;
-}.hero-text.large-heading {
-    font-size: 100rem; /* Further increase heading size */
-    margin-bottom: 100rem;
-}
-
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: white; /* White footer background */
-    color: #333; /* Dark text color for contrast */
-    position: relative; /* Change to relative positioning */
-    bottom: 0;
-    width: 100%;
-    margin-top: auto; /* Push footer to bottom */
-}
-</style>
