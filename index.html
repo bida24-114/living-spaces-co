@@ -59,19 +59,13 @@
             object-fit: cover;
             position: relative;
         }
-        .hero-text-overlay {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .welcome-message {
+            margin-top: 50px; /* Lower the message */
             text-align: center;
-            color: white;
-            z-index: 1;
-        }
-        .hero-text-overlay h1 {
-            font-size: 6rem;
-            margin-bottom: 2rem;
+            font-size: 4rem; /* Make it bigger */
+            font-weight: 700; /* Make it bolder */
             font-family: 'Playfair Display', serif;
+            color: #4b4b4b;
         }
     </style>
 </head>
@@ -89,10 +83,10 @@
     <main>
         <section id="hero">
             <img src="home.jpg" alt="Living Room Interior" class="hero-image">
-            <div class="hero-text-overlay">
-                <h1>LIVING SPACES CO.</h1>
-            </div>
         </section>
+        <div class="welcome-message">
+            Welcome to Living Spaces Co.
+        </div>
     </main>
     <footer>
         <p>&copy; 2025 Living Spaces Co.</p>
