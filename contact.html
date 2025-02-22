@@ -1,150 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | LIVING SPACES CO.</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Contact Page Specific Styles */
-        #contact-us {
-            padding: 2rem;
-            max-width: 800px; /* Limit width for better readability */
-            margin: 2rem auto; /* Center the section */
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            color: #333;
+            background: #f8f8f8; /* Light Beige Background */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
-
+        header {
+            background: #f5f5f5; /* Slightly darker Beige for header */
+            padding: 20px;
+            text-align: center;
+        }
+        .hero-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #4b4b4b; /* Darker Beige for text contrast */
+        }
+        nav {
+            background: #f5f5f5; /* Slightly darker Beige for navigation */
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #4b4b4b; /* Darker Beige for text contrast */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #d3b897; /* Accent color */
+        }
+        main {
+            flex: 1;
+            padding: 40px;
+            text-align: left; /* Align text to the left for better readability */
+        }
+        footer {
+            background: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            color: #4b4b4b;
+        }
+        #contact-us {
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        #contact-us h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #4b4b4b;
+        }
         .contact-details {
             display: flex;
             flex-wrap: wrap;
             gap: 2rem;
             margin-bottom: 2rem;
-            justify-content: center; /* Center contact details */
+            justify-content: center;
         }
-
         .contact-item {
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
-
         .contact-item i {
             font-size: 1.2rem;
-            color: #333;
+            color: #4b4b4b;
         }
-
         #contact-us address {
             font-style: normal;
+            color: #4b4b4b;
         }
-
         #contact-us form label,
         #contact-us form input,
         #contact-us form textarea {
             display: block;
             width: 100%;
             margin-bottom: 0.5rem;
-            box-sizing: border-box; /* Include padding and border in width */
-            padding: 0.5rem; /* Add some padding to inputs */
-            border: 1px solid #ccc; /* Add a border */
+            box-sizing: border-box;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            color: #4b4b4b;
         }
-        #contact-us form textarea{
+        #contact-us form textarea {
             min-height: 100px;
         }
-
         #contact-us form input[type="submit"] {
-            background-color: #333;
+            background-color: #d3b897;
             color: #fff;
             padding: 0.75rem 1.5rem;
             border: none;
             cursor: pointer;
-            border-radius: 3px; /* Match button style */
-        }
-        #contact-us form input[type="submit"]:hover{
-            background-color: #555;
-        }
-
-        /* Style the rest of the page to match the homepage */
-        body {
-            font-family: 'Playfair Display', serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5dc;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            background-color: transparent;
-            color: #333;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav li {
-            margin: 0 1rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            padding: 0.5rem 1rem;
             border-radius: 3px;
         }
-
-        nav a:hover {
-            background-color: #555;
-            color: #fff;
-        }
-
-        main {
-            flex: 1; /* Allow main content to take up available space */
-            padding: 2rem; /* Add padding to main content */
-        }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: #fff;
-            /* If you want the footer to always be at the bottom */
-            /* position: relative;
-            bottom: 0;
-            width: 100%; */
+        #contact-us form input[type="submit"]:hover {
+            background-color: #b19477;
         }
     </style>
 </head>
-
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="product.html">Shop</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="reviews.html">Customer reviews</a></li>
-            </ul>
-        </nav>
+        <h1 class="hero-text">Discover Your Dream Home</h1>
     </header>
-
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html">Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="reviews.html">Customer Reviews</a>
+    </nav>
     <main>
         <section id="contact-us">
             <h2>Contact Us</h2>
             <p>Have questions or need assistance? We'd love to hear from you!</p>
-
             <div class="contact-details">
                 <div class="contact-item">
                     <i class="fas fa-envelope"></i>
@@ -162,25 +143,19 @@
                     </address>
                 </div>
             </div>
-
             <form action="submit_contact.php" method="post">
                 <label for="name">Name:</label><br>
                 <input type="text" id="name" name="name" required><br><br>
-
                 <label for="email">Email:</label><br>
                 <input type="email" id="email" name="email" required><br><br>
-
                 <label for="message">Message:</label><br>
                 <textarea id="message" name="message" rows="4" required></textarea><br><br>
-
                 <input type="submit" value="Send">
             </form>
         </section>
     </main>
-
     <footer>
         <p>&copy; 2025 Living Spaces Co.</p>
     </footer>
 </body>
-
 </html>
