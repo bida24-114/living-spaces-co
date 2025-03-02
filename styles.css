@@ -97,10 +97,11 @@ footer a {
     margin-bottom: 20px;
 }
 
-.about-image {
+.about-image { 
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
+    object-fit: cover; /* Apply object-fit to about images */
 }
 
 /* Contact Page Specific Styles */
@@ -325,8 +326,7 @@ footer a {
     max-width: 100%;
     height: auto;
     margin-bottom: 10px;
-    object-fit: contain; /* Ensures images fit within their container */
-    max-height: 200px; /* Limit image height for consistency */
+    object-fit: cover; /* Ensures images fit within their container */
 }
 
 .product h3 {
@@ -347,6 +347,10 @@ footer a {
 }
 
 @media (max-width: 768px) {
+    .review {
+        width: 90%;
+        margin: 0 auto;
+    }
     .product {
         width: 90%;
         margin: 10px auto;
