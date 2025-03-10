@@ -97,19 +97,19 @@ footer a {
     margin-bottom: 20px;
 }
 
-.about-image { 
+.about-image {
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 /* Contact Page Specific Styles */
 #contact-us {
     max-width: 800px;
-    margin: 2rem auto; 
-    padding: 40px; 
-    background-color: #fff; 
+    margin: 2rem auto;
+    padding: 40px;
+    background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -119,7 +119,7 @@ footer a {
     font-size: 2em;
     margin-bottom: 20px;
     color: #4b4b4b;
-    text-align: center; 
+    text-align: center;
 }
 
 .contact-details {
@@ -127,7 +127,7 @@ footer a {
     flex-wrap: wrap;
     gap: 2rem;
     margin-bottom: 2rem;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .contact-item {
@@ -144,11 +144,11 @@ footer a {
 #contact-us address {
     font-style: normal;
     color: #4b4b4b;
-    text-align: center; 
+    text-align: center;
 }
 
 #contact-us form {
-    margin-top: 20px; 
+    margin-top: 20px;
 }
 
 #contact-us form label,
@@ -174,8 +174,8 @@ footer a {
     border: none;
     cursor: pointer;
     border-radius: 3px;
-    display: block; 
-    margin: 0 auto; 
+    display: block;
+    margin: 0 auto;
 }
 
 #contact-us form input[type="submit"]:hover {
@@ -268,7 +268,6 @@ footer a {
     color: #4b4b4b;
 }
 
-
 /* Terms and Conditions Specific Styles */
 .terms-content {
     max-width: 800px;
@@ -294,75 +293,4 @@ footer a {
 
 /* Product Page Specific Styles */
 .product-page {
-    padding: 40px;
-    text-align: center;
-}
-
-.product-category {
-    margin-bottom: 40px;
-}
-
-.product-category h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2em;
-    margin-bottom: 20px;
-    color: #4b4b4b;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-    gap: 20px;
-    background-color: #fff;
-    padding: 20px; /* Add padding to product grid for spacing */
-}
-
-.product {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center content horizontally */
-    text-align: center; /* Center text within product */
-    padding: 15px;
-    border: 1px solid #eee;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.product img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-    object-fit: cover; /* Ensures images fit within their container */
-}
-
-.product h3 {
-    margin-top: 10px;
-    color: #4b4b4b;
-}
-
-.product-description {
-    margin-top: 10px;
-    color: #4b4b4b;
-    font-size: 0.9em;
-}
-
-.product-price {
-    font-weight: bold;
-    margin-top: 10px;
-    color: #d3b897;
-}
-
-@media (max-width: 768px) {
-    .review {
-        width: 90%;
-        margin: 0 auto;
-    }
-    .product {
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    .product-grid {
-        padding: 10px;
-    }
-}
+    padding: 40px
