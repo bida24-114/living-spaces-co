@@ -351,6 +351,18 @@ footer a {
     margin-top: 10px;
     color: #d3b897;
 }
+.purchase-button {
+    background-colour: #d3b897;
+    colour: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+}
+.purchase-button:hover {
+    background-colour: #b19a80;
+}
 
 @media (max-width: 768px) {
     .review {
