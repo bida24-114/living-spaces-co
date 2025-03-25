@@ -79,9 +79,8 @@ footer a {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
  .logo-image {
-            width: 20px; 
-            height: 10px;
-            margin-bottom: 20px;
+            width: 150px; 
+            height: auto;
         }
 
 /* About Page Specific Styles */
