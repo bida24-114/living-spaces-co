@@ -6,20 +6,277 @@
     <title>Shop Bedroom | Living Spaces Co.</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <style> /* ... (same product list styles) ... */ </style>
+    <style>
+        /* Basic styles for product list */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax as needed */
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .product-item h3 {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .product-item p {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .product-item .price {
+            font-weight: bold;
+            color: #555;
+        }
+        .category-heading {
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
-    <header> <h1 class="hero-text">Discover Your Dream Home</h1> </header>
-    <nav> <a href="index.html">Home</a> <a href="product.html">Shop</a> <a href="about.html">About Us</a> <a href="contact.html">Contact Us</a> <a href="reviews.html">Customer Reviews</a> </nav>
+    <header>
+        <h1 class="hero-text">Discover Your Dream Home</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html">Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="reviews.html">Customer Reviews</a>
+    </nav>
     <main>
         <section class="category-page">
             <h1>Bedroom</h1>
             <div class="product-list">
-                <div class="product-item"> <img src="bedroom_product1.jpg" alt="Comfortable Bed Frame"> <h3>Queen Size Bed Frame</h3> <p>A stylish and sturdy bed frame for restful sleep.</p> </div>
-                <div class="product-item"> <img src="bedroom_product2.jpg" alt="Soft Bedding Set"> <h3>Luxury Bedding Set</h3> <p>A complete set for ultimate comfort.</p> </div>
+                <h2 class="category-heading">Beds & Bed Frames</h2>
+                <div class="product-item">
+                    <img src="bedroom_bed_queen_wood.jpg" alt="Wooden Queen Size Bed Frame">
+                    <h3>Queen Size Wooden Bed Frame</h3>
+                    <p>A classic and sturdy bed frame for restful sleep.</p>
+                    <p class="price">$350.00</p>
                 </div>
+                <div class="product-item">
+                    <img src="bedroom_bed_king_upholstered.jpg" alt="Upholstered King Size Bed Frame">
+                    <h3>King Size Upholstered Bed Frame</h3>
+                    <p>Adds a touch of elegance and comfort to your bedroom.</p>
+                    <p class="price">$550.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_bed_full_platform.jpg" alt="Full Size Platform Bed">
+                    <h3>Full Size Platform Bed</h3>
+                    <p>Modern design that eliminates the need for a box spring.</p>
+                    <p class="price">$280.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_bed_twin_metal.jpg" alt="Twin Size Metal Bed Frame">
+                    <h3>Twin Size Metal Bed Frame</h3>
+                    <p>Durable and space-saving option for smaller rooms.</p>
+                    <p class="price">$180.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_bed_storage.jpg" alt="Queen Size Storage Bed">
+                    <h3>Queen Size Storage Bed</h3>
+                    <p>Features drawers underneath for extra storage space.</p>
+                    <p class="price">$480.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_headboard_king_fabric.jpg" alt="King Size Fabric Headboard">
+                    <h3>King Size Fabric Headboard</h3>
+                    <p>A stylish addition to your existing bed frame.</p>
+                    <p class="price">$220.00</p>
+                </div>
+
+                <h2 class="category-heading">Mattresses</h2>
+                <div class="product-item">
+                    <img src="bedroom_mattress_queen_memoryfoam.jpg" alt="Queen Size Memory Foam Mattress">
+                    <h3>Queen Size Memory Foam Mattress</h3>
+                    <p>Provides excellent support and pressure relief.</p>
+                    <p class="price">$600.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_mattress_king_hybrid.jpg" alt="King Size Hybrid Mattress">
+                    <h3>King Size Hybrid Mattress</h3>
+                    <p>Combines the benefits of innerspring and memory foam.</p>
+                    <p class="price">$850.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_mattress_full_innerspring.jpg" alt="Full Size Innerspring Mattress">
+                    <h3>Full Size Innerspring Mattress</h3>
+                    <p>Traditional support with a comfortable feel.</p>
+                    <p class="price">$450.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_mattress_twin_latex.jpg" alt="Twin Size Latex Mattress">
+                    <h3>Twin Size Latex Mattress</h3>
+                    <p>Natural and hypoallergenic for a healthy sleep.</p>
+                    <p class="price">$520.00</p>
+                </div>
+
+                <h2 class="category-heading">Bedding Sets</h2>
+                <div class="product-item">
+                    <img src="bedroom_bedding_queen_duvet.jpg" alt="Queen Size Duvet Cover Set">
+                    <h3>Queen Size Duvet Cover Set</h3>
+                    <p>A stylish and comfortable duvet cover with matching shams.</p>
+                    <p class="price">$120.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_bedding_king_comforter.jpg" alt="King Size Comforter Set">
+                    <h3>King Size Comforter Set</h3>
+                    <p>A complete set including a comforter, shams, and decorative pillows.</p>
+                    <p class="price">$180.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_bedding_full_sheets.jpg" alt="Full Size Sheet Set">
+                    <h3>Full Size Premium Sheet Set</h3>
+                    <p>Soft and breathable sheets for a comfortable night's sleep.</p>
+                    <p class="price">$70.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_bedding_twin_quilt.jpg" alt="Twin Size Quilt Set">
+                    <h3>Twin Size Quilt Set</h3>
+                    <p>A lightweight and cozy quilt with a matching pillowcase.</p>
+                    <p class="price">$90.00</p>
+                </div>
+
+                <h2 class="category-heading">Nightstands</h2>
+                <div class="product-item">
+                    <img src="bedroom_nightstand_wood.jpg" alt="Wooden Nightstand with Drawer">
+                    <h3>Wooden Nightstand with Drawer</h3>
+                    <p>Provides bedside storage for essentials.</p>
+                    <p class="price">$80.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_nightstand_modern.jpg" alt="Modern Nightstand with Shelf">
+                    <h3>Modern Nightstand with Open Shelf</h3>
+                    <p>Sleek design with convenient storage space.</p>
+                    <p class="price">$95.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_nightstand_mirrored.jpg" alt="Mirrored Nightstand">
+                    <h3>Mirrored Nightstand</h3>
+                    <p>Adds a touch of glamour to your bedroom.</p>
+                    <p class="price">$150.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_nightstand_floating.jpg" alt="Floating Nightstand">
+                    <h3>Floating Nightstand</h3>
+                    <p>Space-saving design with a minimalist look.</p>
+                    <p class="price">$70.00</p>
+                </div>
+
+                <h2 class="category-heading">Dressers & Chests</h2>
+                <div class="product-item">
+                    <img src="bedroom_dresser_6drawer.jpg" alt="Six-Drawer Dresser">
+                    <h3>Six-Drawer Dresser</h3>
+                    <p>Provides ample storage for clothing.</p>
+                    <p class="price">$250.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_chest_5drawer.jpg" alt="Five-Drawer Chest">
+                    <h3>Five-Drawer Chest</h3>
+                    <p>Tall and narrow design for maximizing vertical storage.</p>
+                    <p class="price">$220.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_dresser_mirrored.jpg" alt="Mirrored Dresser">
+                    <h3>Mirrored Dresser with Multiple Drawers</h3>
+                    <p>Combines storage with a stylish mirrored finish.</p>
+                    <p class="price">$380.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_chest_wardrobe.jpg" alt="Wardrobe Chest">
+                    <h3>Wardrobe Chest with Hanging Space</h3>
+                    <p>Offers both drawers and hanging storage.</p>
+                    <p class="price">$420.00</p>
+                </div>
+
+                <h2 class="category-heading">Bedroom Lighting</h2>
+                <div class="product-item">
+                    <img src="bedroom_lamp_table.jpg" alt="Table Lamp">
+                    <h3>Bedside Table Lamp</h3>
+                    <p>Provides soft and ambient lighting for your nightstand.</p>
+                    <p class="price">$45.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_lamp_floor.jpg" alt="Floor Lamp">
+                    <h3>Standing Floor Lamp</h3>
+                    <p>Adds extra lighting to your bedroom corner.</p>
+                    <p class="price">$70.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_lighting_pendant.jpg" alt="Pendant Light">
+                    <h3>Hanging Pendant Light</h3>
+                    <p>A stylish overhead lighting option.</p>
+                    <p class="price">$90.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_lighting_sconce.jpg" alt="Wall Sconce">
+                    <h3>Wall-Mounted Bedside Sconce</h3>
+                    <p>Saves space on your nightstand.</p>
+                    <p class="price">$55.00</p>
+                </div>
+
+                <h2 class="category-heading">Bedroom Decor</h2>
+                <div class="product-item">
+                    <img src="bedroom_rug.jpg" alt="Area Rug">
+                    <h3>Soft Bedroom Area Rug</h3>
+                    <p>Adds warmth and comfort to your floor.</p>
+                    <p class="price">$120.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_curtains.jpg" alt="Blackout Curtains">
+                    <h3>Set of Blackout Curtains</h3>
+                    <p>Blocks out light for better sleep.</p>
+                    <p class="price">$80.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_pillows_decorative.jpg" alt="Decorative Throw Pillows">
+                    <h3>Set of Decorative Throw Pillows</h3>
+                    <p>Adds style and texture to your bed.</p>
+                    <p class="price">$40.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_mirror_fullength.jpg" alt="Full-Length Mirror">
+                    <h3>Full-Length Standing Mirror</h3>
+                    <p>A practical and stylish addition to your room.</p>
+                    <p class="price">$110.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_artwork.jpg" alt="Bedroom Wall Art">
+                    <h3>Framed Bedroom Wall Art</h3>
+                    <p>Adds a personal touch to your walls.</p>
+                    <p class="price">$60.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="bedroom_planter.jpg" alt="Indoor Plant">
+                    <h3>Indoor Plant in Decorative Pot</h3>
+                    <p>Brings life and freshness to your bedroom.</p>
+                    <p class="price">$50.00</p>
+                </div>
+            </div>
         </section>
     </main>
-    <footer> <p>&copy; 2025 Living Spaces Co. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="contact.html">Contact Us</a></p> </footer>
+    <footer>
+        <p>&copy; 2025 Living Spaces Co. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="contact.html">Contact Us</a></p>
+    </footer>
 </body>
 </html>
