@@ -347,7 +347,7 @@ footer a {
     /*kitchen page*/
  .product-list {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax as needed */
+            grid-template-columns: repeat(4, minmax(200px, 1fr)); /* Adjust minmax as needed */
             gap: 20px;
             padding: 20px;
         }
