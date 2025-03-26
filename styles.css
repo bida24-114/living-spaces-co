@@ -306,7 +306,7 @@ footer a {
 
         .category-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(100px, 1fr));
+            grid-template-columns: repeat(2, minmax(250px, 1fr));
             gap: 20px;
             padding: 20px;
         }
@@ -343,3 +343,15 @@ footer a {
             display: block;
             height: 100%;
         }
+.product-grid .product .image-container {
+    width: 200px;
+    height: 200px; 
+    overflow: hidden;
+    margin-bottom: 10px; 
+}
+
+.product-grid .product .image-container img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+}
