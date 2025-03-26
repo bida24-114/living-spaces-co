@@ -6,20 +6,347 @@
     <title>Shop Living Room | Living Spaces Co.</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <style> /* ... (same product list styles) ... */ </style>
+    <style>
+        /* Basic styles for product list */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax as needed */
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .product-item h3 {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .product-item p {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .product-item .price {
+            font-weight: bold;
+            color: #555;
+        }
+        .category-heading {
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
-    <header> <h1 class="hero-text">Discover Your Dream Home</h1> </header>
-    <nav> <a href="index.html">Home</a> <a href="product.html">Shop</a> <a href="about.html">About Us</a> <a href="contact.html">Contact Us</a> <a href="reviews.html">Customer Reviews</a> </nav>
+    <header>
+        <h1 class="hero-text">Discover Your Dream Home</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html">Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="reviews.html">Customer Reviews</a>
+    </nav>
     <main>
         <section class="category-page">
             <h1>Living Room</h1>
             <div class="product-list">
-                <div class="product-item"> <img src="living_product1.jpg" alt="Comfortable Sofa"> <h3>Three-Seater Sofa</h3> <p>A plush and inviting sofa for your living space.</p> </div>
-                <div class="product-item"> <img src="living_product2.jpg" alt="Modern Coffee Table"> <h3>Glass Top Coffee Table</h3> <p>A stylish centerpiece for your living room.</p> </div>
+                <h2 class="category-heading">Sofas & Sectionals</h2>
+                <div class="product-item">
+                    <img src="living_sofa1.jpg" alt="Comfortable Three-Seater Sofa">
+                    <h3>Three-Seater Sofa</h3>
+                    <p>A plush and inviting sofa for your living space.</p>
+                    <p class="price">$450.00</p>
                 </div>
+                <div class="product-item">
+                    <img src="living_sofa2.jpg" alt="Spacious Sectional Sofa">
+                    <h3>L-Shaped Sectional Sofa with Chaise</h3>
+                    <p>Perfect for lounging and entertaining guests with added leg support.</p>
+                    <p class="price">$950.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_loveseat1.jpg" alt="Cozy Loveseat">
+                    <h3>Two-Seater Loveseat</h3>
+                    <p>Ideal for smaller spaces or as an accent piece.</p>
+                    <p class="price">$320.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_recliner1.jpg" alt="Comfortable Recliner">
+                    <h3>Power Recliner with USB Port</h3>
+                    <p>Relax in ultimate comfort with power recline and a convenient USB port.</p>
+                    <p class="price">$380.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_sleeper_sofa1.jpg" alt="Practical Sleeper Sofa">
+                    <h3>Full Sleeper Sofa with Storage</h3>
+                    <p>A versatile piece for seating and accommodating overnight guests with extra storage.</p>
+                    <p class="price">$720.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_futon1.jpg" alt="Modern Futon">
+                    <h3>Convertible Futon Sofa Bed with Armrests</h3>
+                    <p>A stylish and space-saving seating and sleeping solution with added armrests for comfort.</p>
+                    <p class="price">$290.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_modularsofa1.jpg" alt="Versatile Modular Sofa">
+                    <h3>Three-Piece Modular Sofa Set</h3>
+                    <p>Customize your seating arrangement to fit your space.</p>
+                    <p class="price">$1100.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_bench1.jpg" alt="Stylish Living Room Bench">
+                    <h3>Upholstered Living Room Bench</h3>
+                    <p>Provides extra seating and adds a touch of elegance.</p>
+                    <p class="price">$180.00</p>
+                </div>
+
+                <h2 class="category-heading">Coffee & Side Tables</h2>
+                <div class="product-item">
+                    <img src="living_coffeetable1.jpg" alt="Modern Glass Top Coffee Table">
+                    <h3>Glass Top Coffee Table with Metal Frame</h3>
+                    <p>A stylish centerpiece for your living room with a sleek metal frame.</p>
+                    <p class="price">$210.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_coffeetable2.jpg" alt="Rustic Wooden Coffee Table">
+                    <h3>Solid Wood Coffee Table with Lower Shelf</h3>
+                    <p>Functional and adds a touch of rustic charm with extra storage.</p>
+                    <p class="price">$260.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_sidetable1.jpg" alt="Elegant Side Table">
+                    <h3>Round Marble Top Side Table with Gold Legs</h3>
+                    <p>Perfect for placing next to sofas or armchairs with a touch of luxury.</p>
+                    <p class="price">$190.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_sidetable2.jpg" alt="Industrial Style End Table">
+                    <h3>Reclaimed Wood and Metal End Table</h3>
+                    <p>A modern and industrial accent piece with a sustainable touch.</p>
+                    <p class="price">$160.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_nestingtables1.jpg" alt="Set of Nesting Tables">
+                    <h3>Set of Two Acrylic Nesting Tables</h3>
+                    <p>Space-saving and versatile with a modern, transparent design.</p>
+                    <p class="price">$220.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_console_table1.jpg" alt="Stylish Console Table">
+                    <h3>Narrow Console Table with Drawers</h3>
+                    <p>Ideal for hallways or behind sofas for decor and hidden storage.</p>
+                    <p class="price">$290.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_ottomantray1.jpg" alt="Ottoman with Wooden Tray">
+                    <h3>Upholstered Ottoman with Removable Wooden Tray</h3>
+                    <p>Versatile as a footrest, extra seating, or a makeshift table.</p>
+                    <p class="price">$150.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_pouf1.jpg" alt="Knitted Floor Pouf">
+                    <h3>Chunky Knit Floor Pouf</h3>
+                    <p>A comfortable and stylish alternative seating option.</p>
+                    <p class="price">$110.00</p>
+                </div>
+
+                <h2 class="category-heading">TV Stands & Media Consoles</h2>
+                <div class="product-item">
+                    <img src="living_tvstand1.jpg" alt="Modern TV Stand">
+                    <h3>Long Floating TV Stand with LED Lights</h3>
+                    <p>A sleek and space-saving media solution with ambient lighting.</p>
+                    <p class="price">$350.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_mediaconsole1.jpg" alt="Wooden Media Console">
+                    <h3>Rustic Wooden Media Console with Sliding Doors</h3>
+                    <p>Organize your media devices and accessories with a rustic aesthetic and hidden storage.</p>
+                    <p class="price">$420.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_tvstand2.jpg" alt="Corner TV Stand">
+                    <h3>Glass Shelf Corner TV Stand</h3>
+                    <p>Perfect for maximizing space in smaller rooms with a modern glass design.</p>
+                    <p class="price">$260.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_hutch1.jpg" alt="TV Stand with Hutch">
+                    <h3>Entertainment Center with TV Mount and Shelves</h3>
+                    <p>Offers ample storage and display space with an integrated TV mount.</p>
+                    <p class="price">$550.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_soundbarconsole1.jpg" alt="Soundbar Console">
+                    <h3>Low Media Console for Soundbar</h3>
+                    <p>Designed specifically to accommodate a soundbar and other media devices.</p>
+                    <p class="price">$210.00</p>
+                </div>
+
+                <h2 class="category-heading">Armchairs & Accent Chairs</h2>
+                <div class="product-item">
+                    <img src="living_armchair1.jpg" alt="Comfortable Armchair">
+                    <h3>Wide Upholstered Armchair with Pillow</h3>
+                    <p>A cozy spot for reading or relaxing with added comfort from a throw pillow.</p>
+                    <p class="price">$280.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_accentchair1.jpg" alt="Stylish Accent Chair">
+                    <h3>Mid-Century Modern Accent Chair</h3>
+                    <p>Adds a touch of retro style and sophistication to your space.</p>
+                    <p class="price">$320.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_rockingchair1.jpg" alt="Classic Rocking Chair">
+                    <h3>Upholstered Rocking Chair with Footrest</h3>
+                    <p>A timeless piece for comfort and relaxation with added foot support.</p>
+                    <p class="price">$240.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_ottoman1.jpg" alt="Versatile Ottoman">
+                    <h3>Large Round Tufted Ottoman</h3>
+                    <p>Provides ample extra seating, a comfortable footrest, or a stylish coffee table alternative.</p>
+                    <p class="price">$180.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_swivelchair1.jpg" alt="Modern Swivel Chair">
+                    <h3>Comfortable Swivel Accent Chair</h3>
+                    <p>Offers flexibility and style for your living area.</p>
+                    <p class="price">$350.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_lounger1.jpg" alt="Stylish Lounge Chair">
+                    <h3>Modern Lounge Chair with Ottoman</h3>
+                    <p>The perfect set for ultimate relaxation and style.</p>
+                    <p class="price">$450.00</p>
+                </div>
+
+                <h2 class="category-heading">Living Room Lighting</h2>
+                <div class="product-item">
+                    <img src="living_floorlamp1.jpg" alt="Modern Floor Lamp">
+                    <h3>Arc Floor Lamp with Marble Base</h3>
+                    <p>Provides stylish and adjustable overhead lighting with a sturdy base.</p>
+                    <p class="price">$150.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_tablelamp1.jpg" alt="Stylish Table Lamp">
+                    <h3>Set of Two Modern Geometric Table Lamps</h3>
+                    <p>Adds ambient lighting and a contemporary design element to your side tables.</p>
+                    <p class="price">$120.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_pendantlight1.jpg" alt="Pendant Light">
+                    <h3>Statement Pendant Light Fixture</h3>
+                    <p>A striking focal point that provides ample illumination.</p>
+                    <p class="price">$180.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_sconces1.jpg" alt="Wall Sconces">
+                    <h3>LED Dimmable Wall Sconces (Set of Two)</h3>
+                    <p>Creates adjustable warm and inviting ambient lighting.</p>
+                    <p class="price">$110.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_tracklight1.jpg" alt="Living Room Track Lighting">
+                    <h3>Four-Light Adjustable Track Lighting Fixture</h3>
+                    <p>Provides directional lighting for highlighting artwork or specific areas.</p>
+                    <p class="price">$130.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_smartlamp1.jpg" alt="Smart Table Lamp">
+                    <h3>Smart Wi-Fi Table Lamp with Color Control</h3>
+                    <p>Offers customizable lighting options controlled via your smartphone.</p>
+                    <p class="price">$90.00</p>
+                </div>
+
+                <h2 class="category-heading">Living Room Decor</h2>
+                <div class="product-item">
+                    <img src="living_rug1.jpg" alt="Area Rug">
+                    <h3>Large Wool Area Rug with Geometric Pattern</h3>
+                    <p>Defines your living space and adds warmth and texture with a stylish design.</p>
+                    <p class="price">$280.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_throwpillows1.jpg" alt="Set of Throw Pillows">
+                    <h3>Set of Six Luxurious Velvet Throw Pillows</h3>
+                    <p>Adds comfort and a touch of opulence to your sofa or chairs.</p>
+                    <p class="price">$65.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_blanket1.jpg" alt="Cozy Throw Blanket">
+                    <h3>Oversized Chunky Knit Throw Blanket</h3>
+                    <p>Perfect for snuggling up on the couch with extra warmth and style.</p>
+                    <p class="price">$50.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_artwork1.jpg" alt="Framed Wall Art">
+                    <h3>Large Multi-Panel Canvas Wall Art</h3>
+                    <p>Creates a dramatic focal point in your living room.</p>
+                    <p class="price">$150.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_vases1.jpg" alt="Decorative Vases">
+                    <h3>Set of Three Hand-Blown Glass Vases</h3>
+                    <p>Ideal for displaying flowers or as unique decorative accents.</p>
+                    <p class="price">$85.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_candles1.jpg" alt="Scented Candles">
+                    <h3>Luxury Scented Candle Gift Set</h3>
+                    <p>Creates a relaxing and inviting atmosphere with premium fragrances.</p>
+                    <p class="price">$55.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_planter1.jpg" alt="Indoor Planter">
+                    <h3>Tall Ceramic Indoor Planter with Drainage</h3>
+                    <p>Bring some greenery into your living space with a stylish and functional planter.</p>
+                    <p class="price">$90.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_mirrors1.jpg" alt="Decorative Mirror">
+                    <h3>Sunburst Decorative Wall Mirror</h3>
+                    <p>Adds a touch of artistic flair and reflects light beautifully.</p>
+                    <p class="price">$180.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_ottoman1.jpg" alt="Versatile Ottoman">
+                    <h3>Large Rectangular Coffee Table Ottoman</h3>
+                    <p>Functions as a coffee table, footrest, or extra seating.</p>
+                    <p class="price">$220.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_bookshelf1.jpg" alt="Modern Bookshelf">
+                    <h3>Five-Tier Modern Bookshelf</h3>
+                    <p>Provides ample storage and display space for books and decor.</p>
+                    <p class="price">$160.00</p>
+                </div>
+                <div class="product-item">
+                    <img src="living_roomdivider1.jpg" alt="Stylish Room Divider">
+                    <h3>Three-Panel Decorative Room Divider</h3>
+                    <p>Creates separate zones within your living space.</p>
+                    <p class="price">$190.00</p>
+                </div>
+            </div>
         </section>
     </main>
-    <footer> <p>&copy; 2025 Living Spaces Co. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="contact.html">Contact Us</a></p> </footer>
+    <footer>
+        <p>&copy; 2025 Living Spaces Co. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="contact.html">Contact Us</a></p>
+    </footer>
 </body>
 </html>
