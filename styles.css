@@ -102,7 +102,7 @@ footer a {
 }
 
 .about-image { 
-    max-width: 50%;
+    max-width: 60%;
     height: auto;
     margin-bottom: 20px;
     object-fit: cover; 
