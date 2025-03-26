@@ -344,3 +344,46 @@ footer a {
             display: block;
             height: 100%;
         }
+    /*kitchen page*/
+ .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax as needed */
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .product-item h3 {
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .product-item p {
+            font-size: 0.9em;
+            color: #777;
+        }
+        .product-item .price {
+            font-weight: bold;
+            color: #555;
+        }
+        .category-heading {
+            font-size: 1.5em;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
