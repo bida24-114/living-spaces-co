@@ -1,1 +1,74 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Kitchen | Living Spaces Co.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* You might add category-specific styles here if needed */
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .product-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .product-item h3 {
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        .product-item p {
+            font-size: 0.9em;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="hero-text">Discover Your Dream Home</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html">Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="reviews.html">Customer Reviews</a>
+    </nav>
+    <main>
+        <section class="category-page">
+            <h1>Kitchen</h1>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="kitchen_product1.jpg" alt="Kitchen Product 1">
+                    <h3>Product Name 1</h3>
+                    <p>Description of product 1.</p>
+                </div>
+                <div class="product-item">
+                    <img src="kitchen_product2.jpg" alt="Kitchen Product 2">
+                    <h3>Product Name 2</h3>
+                    <p>Description of product 2.</p>
+                </div>
+                </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Living Spaces Co. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="contact.html">Contact Us</a></p>
+    </footer>
+</body>
+</html>
