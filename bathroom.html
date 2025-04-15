@@ -9,10 +9,24 @@
     <style>
         /* Basic styles for product list */
         .product-list {
+            padding: 20px;
+        }
+        .category-section {
+            margin-bottom: 40px; /* Add spacing between categories */
+            border-bottom: 1px solid #eee; /* Optional: visual separation */
+            padding-bottom: 20px;
+            text-align: center; /* Center the category header */
+        }
+        .category-heading {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust minmax as needed */
             gap: 20px;
-            padding: 20px;
+            margin-top: 15px;
         }
         .product-item {
             border: 1px solid #ddd;
@@ -22,6 +36,9 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
             padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Space out content within product item */
         }
         .product-item img {
             width: 100%;
@@ -36,19 +53,35 @@
         .product-item p {
             font-size: 0.9em;
             color: #777;
+            margin-bottom: 10px; /* Add some space above the button */
         }
         .product-item .price {
             font-weight: bold;
             color: #555;
+            margin-bottom: 10px; /* Add space after the price */
         }
-        .category-heading {
-            font-size: 1.5em;
-            margin-top: 30px;
-            margin-bottom: 10px;
-            text-align: center;
-            color: #333;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 5px;
+        .add-to-cart {
+            background-color: #f5f5dc; /* Beige color */
+            color: #333; /* Dark text for contrast */
+            border: 1px solid #dcdcdc; /* Light gray border for definition */
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            width: 80%; /* Adjust width of the button */
+            margin: 0 auto; /* Center the button */
+        }
+        .add-to-cart:hover {
+            background-color: #e8e8d4; /* Slightly darker beige on hover */
+        }
+        .category-page h1 {
+            text-align: center; /* Center the main "Bathroom" heading */
+            margin-bottom: 20px; /* Add some space below the main heading */
+            font-family: 'Playfair Display', serif; /* Use the same font as the other header */
+            font-size: 2.5em; /* Enlarge the font size */
+            font-weight: 700; /* Make it bold like the hero text */
+            color: #333; /* Match the color of category headings if desired */
         }
     </style>
 </head>
@@ -66,207 +99,267 @@
     <main>
         <section class="category-page">
             <h1>Bathroom</h1>
-            <div class="product-list">
+
+            <div class="category-section">
                 <h2 class="category-heading">Toilets</h2>
-                <div class="product-item">
-                    <img src="bathroom_toilet_round.jpg" alt="Round Front Toilet">
-                    <h3>Round Front Toilet</h3>
-                    <p>A classic and compact option.</p>
-                    <p class="price">$250.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_toilet_elongated.jpg" alt="Elongated Front Toilet">
-                    <h3>Elongated Front Toilet</h3>
-                    <p>Offers more room and comfort.</p>
-                    <p class="price">$300.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_toilet_onepiece.jpg" alt="One-Piece Toilet">
-                    <h3>One-Piece Toilet</h3>
-                    <p>Sleek and modern design with easy cleaning.</p>
-                    <p class="price">$350.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_toilet_two_piece.jpg" alt="Two-Piece Toilet">
-                    <h3>Two-Piece Toilet</h3>
-                    <p>Traditional and easy to install.</p>
-                    <p class="price">$280.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_toilet_smart.jpg" alt="Smart Toilet">
-                    <h3>Smart Toilet with Advanced Features</h3>
-                    <p>Experience the ultimate in comfort and hygiene.</p>
-                    <p class="price">$800.00</p>
-                </div>
-
-                <h2 class="category-heading">Sinks & Vanities</h2>
-                <div class="product-item">
-                    <img src="bathroom_sink_vessel.jpg" alt="Vessel Sink">
-                    <h3>Vessel Sink with Pedestal</h3>
-                    <p>Unique and stylish design.</p>
-                    <p class="price">$150.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_sink_undermount.jpg" alt="Undermount Sink">
-                    <h3>Undermount Sink with Vanity</h3>
-                    <p>Creates a seamless and modern look.</p>
-                    <p class="price">$400.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_sink_wall_mounted.jpg" alt="Wall-Mounted Sink">
-                    <h3>Wall-Mounted Sink</h3>
-                    <p>Saves space and creates an open feel.</p>
-                    <p class="price">$200.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_vanity_single.jpg" alt="Single Sink Vanity">
-                    <h3>Single Sink Vanity with Storage</h3>
-                    <p>Provides ample storage space.</p>
-                    <p class="price">$500.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_vanity_double.jpg" alt="Double Sink Vanity">
-                    <h3>Double Sink Vanity</h3>
-                    <p>Perfect for couples or families.</p>
-                    <p class="price">$700.00</p>
-                </div>
-
-                <h2 class="category-heading">Bathtubs</h2>
-                <div class="product-item">
-                    <img src="bathroom_bathtub_alcove.jpg" alt="Alcove Bathtub">
-                    <h3>Alcove Bathtub</h3>
-                    <p>Traditional and easy to install.</p>
-                    <p class="price">$500.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_bathtub_freestanding.jpg" alt="Freestanding Bathtub">
-                    <p>Adds a touch of elegance and luxury.</p>
-                    <p class="price">$800.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_bathtub_corner.jpg" alt="Corner Bathtub">
-                    <p>Maximizes space in smaller bathrooms.</p>
-                    <p class="price">$600.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_bathtub_jetted.jpg" alt="Jetted Bathtub">
-                    <p>Provides a relaxing and therapeutic experience.</p>
-                    <p class="price">$1000.00</p>
-                </div>
-
-                <h2 class="category-heading">Showers</h2>
-                <div class="product-item">
-                    <img src="bathroom_shower_enclosure.jpg" alt="Shower Enclosure">
-                    <h3>Glass Shower Enclosure</h3>
-                    <p>Creates a modern and open feel.</p>
-                    <p class="price">$300.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_shower_door.jpg" alt="Shower Door">
-                    <p>Provides easy access to the shower.</p>
-                    <p class="price">$200.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_shower_head.jpg" alt="Shower Head">
-                    <h3>High-Pressure Shower Head</h3>
-                    <p>Enhances your shower experience.</p>
-                    <p class="price">$50.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_shower_handheld.jpg" alt="Handheld Shower Head">
-                    <p>Versatile for rinsing and cleaning.</p>
-                    <p class="price">$30.00"/>
-                    <p class="price">$40.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_shower_panel.jpg" alt="Shower Panel System">
-                    <h3>Multi-Function Shower Panel System</h3>
-                    <p>Offers a spa-like shower experience.</p>
-                    <p class="price">$450.00</p>
-                </div>
-
-                <h2 class="category-heading">Bathroom Storage</h2>
-                <div class="product-item">
-                    <img src="bathroom_storage_cabinet.jpg" alt="Bathroom Storage Cabinet">
-                    <h3>Over-the-Toilet Storage Cabinet</h3>
-                    <p>Maximizes vertical storage space.</p>
-                    <p class="price">$120.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_storage_shelves.jpg" alt="Bathroom Shelves">
-                    <h3>Floating Bathroom Shelves (Set of 2)</h3>
-                    <p>Stylish and functional storage for toiletries.</p>
-                    <p class="price">$60.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_storage_cart.jpg" alt="Bathroom Cart">
-                    <h3>Rolling Bathroom Storage Cart</h3>
-                    <p>Provides mobile storage for essentials.</p>
-                    <p class="price">$80.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_storage_hamper.jpg" alt="Laundry Hamper">
-                    <h3>Woven Laundry Hamper with Lid</h3>
-                    <p>Keeps your bathroom tidy.</p>
-                    <p class="price">$50.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_mirror_cabinet.jpg" alt="Mirror with Storage">
-                    <h3>Medicine Cabinet with Mirror</h3>
-                    <p>Offers discreet storage behind a mirror.</p>
-                    <p class="price">$150.00</p>
-                </div>
-
-                <h2 class="category-heading">Bathroom Decor</h2>
-                <div class="product-item">
-                    <img src="bathroom_rug.jpg" alt="Bathroom Rug">
-                    <h3>Non-Slip Bathroom Rug</h3>
-                    <p>Soft and absorbent for comfort and safety.</p>
-                    <p class="price">$30.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_towels_set.jpg" alt="Towel Set">
-                    <h3>Luxury Cotton Towel Set (6-Piece)</h3>
-                    <p>Soft and absorbent for a spa-like feel.</p>
-                    <p class="price">$70.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_showercurtain.jpg" alt="Shower Curtain">
-                    <h3>Waterproof Fabric Shower Curtain</h3>
-                    <p>Stylish and functional for your shower or tub.</p>
-                    <p class="price">$40.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_accessories_set.jpg" alt="Bathroom Accessories Set">
-                    <h3>5-Piece Bathroom Accessories Set</h3>
-                    <p>Includes soap dish, toothbrush holder, and more.</p>
-                    <p class="price">$50.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_mirror_decorative.jpg" alt="Decorative Bathroom Mirror">
-                    <h3>Framed Decorative Bathroom Mirror</h3>
-                    <p>Adds style and reflects light.</p>
-                    <p class="price">$100.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_lighting_vanity.jpg" alt="Vanity Lighting">
-                    <h3>Vanity Light Fixture (3-Light)</h3>
-                    <p>Provides ample lighting for your sink area.</p>
-                    <p class="price">$80.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_scale_digital.jpg" alt="Digital Bathroom Scale">
-                    <h3>Digital Bathroom Scale</h3>
-                    <p>Accurate and easy to read.</p>
-                    <p class="price">$35.00</p>
-                </div>
-                <div class="product-item">
-                    <img src="bathroom_planter.jpg" alt="Small Bathroom Planter">
-                    <h3>Small Ceramic Planter for Bathroom</h3>
-                    <p>Adds a touch of greenery.</p>
-                    <p class="price">$25.00</p>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="bathroom_toilet_round.jpg" alt="Round Front Toilet">
+                        <h3>Round Front Toilet</h3>
+                        <p>A classic and compact option.</p>
+                        <p class="price">$250.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_toilet_elongated.jpg" alt="Elongated Front Toilet">
+                        <h3>Elongated Front Toilet</h3>
+                        <p>Offers more room and comfort.</p>
+                        <p class="price">$300.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_toilet_onepiece.jpg" alt="One-Piece Toilet">
+                        <h3>One-Piece Toilet</h3>
+                        <p>Sleek and modern design with easy cleaning.</p>
+                        <p class="price">$350.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_toilet_two_piece.jpg" alt="Two-Piece Toilet">
+                        <h3>Two-Piece Toilet</h3>
+                        <p>Traditional and easy to install.</p>
+                        <p class="price">$280.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_toilet_smart.jpg" alt="Smart Toilet">
+                        <h3>Smart Toilet with Advanced Features</h3>
+                        <p>Experience the ultimate in comfort and hygiene.</p>
+                        <p class="price">$800.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
                 </div>
             </div>
+
+            <div class="category-section">
+                <h2 class="category-heading">Sinks & Vanities</h2>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="bathroom_sink_vessel.jpg" alt="Vessel Sink">
+                        <h3>Vessel Sink with Pedestal</h3>
+                        <p>Unique and stylish design.</p>
+                        <p class="price">$150.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_sink_undermount.jpg" alt="Undermount Sink">
+                        <h3>Undermount Sink with Vanity</h3>
+                        <p>Creates a seamless and modern look.</p>
+                        <p class="price">$400.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_sink_wall_mounted.jpg" alt="Wall-Mounted Sink">
+                        <h3>Wall-Mounted Sink</h3>
+                        <p>Saves space and creates an open feel.</p>
+                        <p class="price">$200.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_vanity_single.jpg" alt="Single Sink Vanity">
+                        <h3>Single Sink Vanity with Storage</h3>
+                        <p>Provides ample storage space.</p>
+                        <p class="price">$500.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_vanity_double.jpg" alt="Double Sink Vanity">
+                        <h3>Double Sink Vanity</h3>
+                        <p>Perfect for couples or families.</p>
+                        <p class="price">$700.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <h2 class="category-heading">Bathtubs</h2>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="bathroom_bathtub_alcove.jpg" alt="Alcove Bathtub">
+                        <h3>Alcove Bathtub</h3>
+                        <p>Traditional and easy to install.</p>
+                        <p class="price">$500.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_bathtub_freestanding.jpg" alt="Freestanding Bathtub">
+                        <h3>Freestanding Bathtub</h3>
+                        <p>Adds a touch of elegance and luxury.</p>
+                        <p class="price">$800.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_bathtub_corner.jpg" alt="Corner Bathtub">
+                        <h3>Corner Bathtub</h3>
+                        <p>Maximizes space in smaller bathrooms.</p>
+                        <p class="price">$600.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_bathtub_jetted.jpg" alt="Jetted Bathtub">
+                        <h3>Jetted Bathtub</h3>
+                        <p>Provides a relaxing and therapeutic experience.</p>
+                        <p class="price">$1000.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <h2 class="category-heading">Showers</h2>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="bathroom_shower_enclosure.jpg" alt="Shower Enclosure">
+                        <h3>Glass Shower Enclosure</h3>
+                        <p>Creates a modern and open feel.</p>
+                        <p class="price">$300.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_shower_door.jpg" alt="Shower Door">
+                        <h3>Shower Door</h3>
+                        <p>Provides easy access to the shower.</p>
+                        <p class="price">$200.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_shower_head.jpg" alt="Shower Head">
+                        <h3>High-Pressure Shower Head</h3>
+                        <p>Enhances your shower experience.</p>
+                        <p class="price">$50.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_shower_handheld.jpg" alt="Handheld Shower Head">
+                        <h3>Handheld Shower Head</h3>
+                        <p>Versatile for rinsing and cleaning.</p>
+                        <p class="price">$40.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_shower_panel.jpg" alt="Shower Panel System">
+                        <h3>Multi-Function Shower Panel System</h3>
+                        <p>Offers a spa-like shower experience.</p>
+                        <p class="price">$450.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <h2 class="category-heading">Bathroom Storage</h2>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="bathroom_storage_cabinet.jpg" alt="Bathroom Storage Cabinet">
+                        <h3>Over-the-Toilet Storage Cabinet</h3>
+                        <p>Maximizes vertical storage space.</p>
+                        <p class="price">$120.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_storage_shelves.jpg" alt="Bathroom Shelves">
+                        <h3>Floating Bathroom Shelves (Set of 2)</h3>
+                        <p>Stylish and functional storage for toiletries.</p>
+                        <p class="price">$60.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_storage_cart.jpg" alt="Bathroom Cart">
+                        <h3>Rolling Bathroom Storage Cart</h3>
+                        <p>Provides mobile storage for essentials.</p>
+                        <p class="price">$80.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_storage_hamper.jpg" alt="Laundry Hamper">
+                        <h3>Woven Laundry Hamper with Lid</h3>
+                        <p>Keeps your bathroom tidy.</p>
+                        <p class="price">$50.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_mirror_cabinet.jpg" alt="Mirror with Storage">
+                        <h3>Medicine Cabinet with Mirror</h3>
+                        <p>Offers discreet storage behind a mirror.</p>
+                        <p class="price">$150.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-section">
+                <h2 class="category-heading">Bathroom Decor</h2>
+                <div class="product-grid">
+                    <div class="product-item">
+                        <img src="bathroom_rug.jpg" alt="Bathroom Rug">
+                        <h3>Non-Slip Bathroom Rug</h3>
+                        <p>Soft and absorbent for comfort and safety.</p>
+                        <p class="price">$30.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_towels_set.jpg" alt="Towel Set">
+                        <h3>Luxury Cotton Towel Set (6-Piece)</h3>
+                        <p>Soft and absorbent for a spa-like feel.</p>
+                        <p class="price">$70.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_showercurtain.jpg" alt="Shower Curtain">
+                        <h3>Waterproof Fabric Shower Curtain</h3>
+                        <p>Stylish and functional for your shower or tub.</p>
+                        <p class="price">$40.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_accessories_set.jpg" alt="Bathroom Accessories Set">
+                        <h3>5-Piece Bathroom Accessories Set</h3>
+                        <p>Includes soap dish, toothbrush holder, and more.</p>
+                        <p class="price">$50.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_mirror_decorative.jpg" alt="Decorative Bathroom Mirror">
+                        <h3>Framed Decorative Bathroom Mirror</h3>
+                        <p>Adds style and reflects light.</p>
+                        <p class="price">$100.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_lighting_vanity.jpg" alt="Vanity Lighting">
+                        <h3>Vanity Light Fixture (3-Light)</h3>
+                        <p>Provides ample lighting for your sink area.</p>
+                        <p class="price">$80.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_scale_digital.jpg" alt="Digital Bathroom Scale">
+                        <h3>Digital Bathroom Scale</h3>
+                        <p>Accurate and easy to read.</p>
+                        <p class="price">$35.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="product-item">
+                        <img src="bathroom_planter.jpg" alt="Small Bathroom Planter">
+                        <h3>Small Ceramic Planter for Bathroom</h3>
+                        <p>Adds a touch of greenery.</p>
+                        <p class="price">$25.00</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
         </section>
     </main>
     <footer>
