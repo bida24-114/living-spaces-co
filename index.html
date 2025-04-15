@@ -6,225 +6,12 @@
     <title>Home | LIVING SPACES CO.</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #f8f8f8;
-        }
-
-        .hero-text {
-            font-family: 'Playfair Display', serif;
-            font-size: 2em;
-            font-weight: 700;
-            color: #333;
-        }
-
-        .top-right {
-            display: flex;
-            align-items: center;
-        }
-
-        .top-right button.add-to-cart-nav {
-            background-color: #5cb85c;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-            margin-left: 10px;
-        }
-
-        .top-right button.add-to-cart-nav:hover {
-            background-color: #4cae4c;
-        }
-
-        .top-right .auth-links a {
-            margin-left: 10px;
-            background-color: #eee;
-            padding: 8px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            color: #333;
-        }
-
-        .top-right .auth-links a:hover {
-            background-color: #ddd;
-        }
-
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #ddd;
-            padding: 10px 20px;
-        }
-
-        nav a {
-            color: #333;
-            text-decoration: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            margin: 0 10px;
-        }
-
-        nav a:hover {
-            background-color: #ccc;
-        }
-
-        #hero {
-            position: relative;
-            text-align: center;
-            color: white;
-            margin-top: 20px; /* Add some space below the nav */
-        }
-
-        .hero-image {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .welcome-message {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-family: 'Playfair Display', serif;
-            font-size: 3em;
-            font-weight: 700;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-        }
-
-        main {
-            padding: 20px;
-            flex-grow: 1; /* Allow main to take up remaining vertical space */
-        }
-
-        #featured-products {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-
-        .product-item {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            overflow: hidden;
-            background-color: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            padding: 15px;
-        }
-
-        .product-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin-bottom: 10px;
-        }
-
-        .product-item h3 {
-            font-size: 1.1em;
-            margin-bottom: 5px;
-        }
-
-        .product-item .price {
-            font-weight: bold;
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        .product-item button.add-to-cart {
-            background-color: #f5f5dc;
-            color: #333;
-            border: 1px solid #dcdcdc;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-            transition: background-color 0.3s ease;
-        }
-
-        .product-item button.add-to-cart:hover {
-            background-color: #e8e8d4;
-        }
-
-        #our-story {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .read-more-button {
-            display: inline-block;
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 10px;
-        }
-
-        .read-more-button:hover {
-            background-color: #0056b3;
-        }
-
-        #customer-testimonials {
-            text-align: center;
-        }
-
-        .testimonial {
-            border: 1px solid #eee;
-            padding: 15px;
-            margin: 10px auto;
-            max-width: 600px;
-            border-radius: 5px;
-            background-color: #fff;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 20px;
-        }
-
-        footer a {
-            color: #f8f8f8;
-            text-decoration: none;
-            margin: 0 10px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
     <header>
         <h1 class="hero-text">Discover Your Dream Home</h1>
-        <div class="top-right">
-            <button class="add-to-cart-nav">
+<div class="top-right">
+    <button class="add-to-cart-nav">
                 <i class="fas fa-shopping-cart"></i> Add to Cart
             </button>
             <div class="auth-links">
@@ -242,14 +29,16 @@
     </nav>
     <main>
         <section id="hero">
-            <img src="hero.jpeg" alt="Living Spaces Co. Logo" class="hero-image">
-            <div class="welcome-message">
-                Welcome to Living Spaces Co.
+          <img src="hero.jpeg" alt="Living Spaces Co. Logo" class="hero-image">
+                <div class="welcome-message">
+             Welcome to Living Spaces Co.
             </div>
         </section>
-            </main>
+        
+    </main>
     <footer>
         <p>&copy; 2025 Living Spaces Co. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a> | <a href="contact.html">Contact Us</a></p>
     </footer>
 </body>
+    
 </html>
