@@ -6,6 +6,7 @@
     <title>About Us | LIVING SPACES CO.</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         .go-to-cart-button {
             background-color: #007bff; /* Blue button */
@@ -33,6 +34,36 @@
             margin-bottom: 20px;
             border-radius: 8px; /* Optional: round the image corners */
         }
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: #f8f8f8;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        nav a:hover {
+            background-color: #ddd;
+        }
+
+        nav .cart-link {
+            font-size: 1.2em;
+        }
+
+        nav .auth-links a {
+            margin-left: 10px;
+            background-color: #eee;
+        }
+
+        nav .auth-links a:hover {
+            background-color: #ddd;
+        }
     </style>
 </head>
 <body>
@@ -45,6 +76,11 @@
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
         <a href="reviews.html">Customer Reviews</a>
+        <a href="cart.html" class="cart-link"><i class="fas fa-shopping-cart"></i></a>
+        <div class="auth-links">
+            <a href="signin.html">Sign In</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
     </nav>
     <main>
         <section class="about-content">
