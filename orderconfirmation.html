@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation | Living Spaces Co.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Inherit general styles */
+        .confirmation-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .confirmation-container h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5em;
+            color: #5cb85c;
+            margin-bottom: 20px;
+        }
+        .confirmation-container p {
+            margin-bottom: 15px;
+            color: #555;
+            font-size: 1em;
+        }
+        .order-details {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            text-align: left;
+        }
+        .detail-item {
+            margin-bottom: 8px;
+        }
+        .detail-item strong {
+            color: #333;
+        }
+        .continue-shopping-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+        .continue-shopping-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="hero-text">Discover Your Dream Home</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html">Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="reviews.html">Customer Reviews</a>
+    </nav>
+    <main>
+        <div class="confirmation-container">
+            <h1>Thank You for Your Order!</h1>
+            <p>Your order has been successfully placed and is being processed.</p>
+            <p>Your order number is: <strong id="order-number">#LS-2025-0415-001</strong></p>
+
+            <div class="order-details">
+                <h2>Order Summary</h2>
+                <p class="detail-item"><strong>Items:</strong> <span id="ordered-items">Stainless Steel Single Bowl Sink, Modern Two-Slice Toaster (2)</span></p>
+                <p class="detail-item"><strong>Shipping To:</strong> <span id="shipping-address">Orapa, Central District, Botswana</span></p>
+                <p class="detail-item"><strong>Total:</strong> <span id="order-total">P1610.00</span></p>
+                <p>You will receive a confirmation email with more details shortly.</p>
+            </div>
+
+            <a href="product.html" class="continue-shopping-button">Continue Shopping</a>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Living Spaces Co. All Rights Reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderNumberElement = document.getElementById('order-number');
+            const orderedItemsElement = document.getElementById('ordered-items');
+            const shippingAddressElement = document.getElementById('shipping-address');
+            const orderTotalElement = document.getElementById('order-total');
+
+            // In a real application, you would retrieve the actual order details
+            // from your server or local storage after the checkout process.
+            // The data below is for example purposes.
+            const orderData = {
+                orderNumber: 'LS-2025-0415-001',
+                items: 'Stainless Steel Single Bowl Sink, Modern Two-Slice Toaster (2)',
+                shippingAddress: 'Orapa, Central District, Botswana',
+                total: 'P1610.00'
+            };
+
+            orderNumberElement.textContent = orderData.orderNumber;
+            orderedItemsElement.textContent = orderData.items;
+            shippingAddressElement.textContent = orderData.shippingAddress;
+            orderTotalElement.textContent = orderData.total;
+        });
+    </script>
+</body>
+</html>
