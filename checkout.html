@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Living Spaces Co.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Inherit general styles */
+        .checkout-container {
+            max-width: 700px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .checkout-container h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+        .form-group select {
+            appearance: none;
+            background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="%23333" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 1em;
+        }
+        .payment-details {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .payment-options label {
+            font-weight: normal;
+            margin-left: 5px;
+        }
+        .order-summary {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .summary-item strong {
+            color: #333;
+        }
+        .total {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-top: 15px;
+        }
+        .place-order-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .place-order-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="hero-text">Discover Your Dream Home</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="product.html">Shop</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="reviews.html">Customer Reviews</a>
+    </nav>
+    <main>
+        <div class="checkout-container">
+            <h1>Checkout</h1>
+            <form id="checkout-form">
+                <h2>Shipping Information</h2>
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+                <div class="form-group">
+                    <label for="zip">Zip Code:</label>
+                    <input type="text" id="zip" name="zip" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="botswana" selected>Botswana</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <h2>Payment Information</h2>
+                <div class="payment-details">
+                    <div class="form-group">
+                        <label for="payment-method">Payment Method:</label>
+                        <select id="payment-method" name="payment-method">
+                            <option value="credit-card" selected>Credit Card</option>
+                            </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-number">Card Number:</label>
+                        <input type="text" id="card-number" name="card-number">
+                    </div>
+                    <div class="form-group">
+                        <label for="expiry">Expiry Date (MM/YY):</label>
+                        <input type="text" id="expiry" name="expiry">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv">
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h2>Order Summary</h2>
+                    <div class="summary-item"><strong>Subtotal:</strong> <span id="summary-subtotal">P0.00</span></div>
+                    <div class="summary-item"><strong>Shipping:</strong> <span id="summary-shipping">P0.00</span></div>
+                    <div class="total"><strong>Total:</strong> <span id="summary-total">P0.00</span></div>
+                </div>
+
+                <button type="submit" class="place-order-button">Place Order</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Living Spaces Co. All Rights Reserved.</p>
+        <p><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const summarySubtotal = document.getElementById('summary-subtotal');
+            const summaryShipping = document.getElementById('summary-shipping');
+            const summaryTotal = document.getElementById('summary-total');
+
+            // Example values (replace with actual cart subtotal and shipping cost)
+            const cartSubtotalValue = 1560.00;
+            const shippingCostValue = 50.00;
+
+            summarySubtotal.textContent = `P${cartSubtotalValue.toFixed(2)}`;
+            summaryShipping.textContent = `P${shippingCostValue.toFixed(2)}`;
+            summaryTotal.textContent = `P${(cartSubtotalValue + shippingCostValue).toFixed(2)}`;
+
+            document.getElementById('checkout-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // In a real application, you would process the order data here
+                // and then redirect to the order confirmation page.
+                window.location.href = 'order-confirmation.html';
+            });
+        });
+    </script>
+</body>
+</html>
