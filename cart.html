@@ -114,7 +114,7 @@
             <h1>Your Shopping Cart</h1>
             <div id="cart-items-container">
                 <div class="empty-cart" id="empty-cart-message">Your cart is currently empty.</div>
-                </div>
+            </div>
             <div class="cart-summary" id="cart-summary">
                 <p class="cart-total">Subtotal: <span id="cart-subtotal">P0.00</span></p>
                 <button class="checkout-button">Proceed to Checkout</button>
@@ -134,22 +134,30 @@
             const cartSubtotalElement = document.getElementById('cart-subtotal');
             const checkoutButton = document.querySelector('.checkout-button');
 
-            // Example cart data (replace with your actual cart data retrieval)
-            const cartData = [
-               
-            ];
+            // Function to get cart data from local storage
+            function getCart() {
+                const cartData = localStorage.getItem('shoppingCart');
+                return cartData ? JSON.parse(cartData) : [];
+            }
 
+            // Function to save cart data to local storage
+            function saveCart(cart) {
+                localStorage.setItem('shoppingCart', JSON.stringify(cart));
+            }
+
+            // Function to update the cart display
             function updateCartDisplay() {
+                const cart = getCart();
                 cartItemsContainer.innerHTML = '';
                 let subtotal = 0;
 
-                if (cartData.length === 0) {
+                if (cart.length === 0) {
                     emptyCartMessage.style.display = 'block';
                     cartSummary.style.display = 'none';
                 } else {
                     emptyCartMessage.style.display = 'none';
                     cartSummary.style.display = 'block';
-                    cartData.forEach(item => {
+                    cart.forEach(item => {
                         const cartItemDiv = document.createElement('div');
                         cartItemDiv.classList.add('cart-item');
                         cartItemDiv.innerHTML = `
@@ -159,9 +167,9 @@
                                 <div class="item-price">P${item.price.toFixed(2)}</div>
                             </div>
                             <div class="quantity-controls">
-                                <button>-</button>
+                                <button class="decrease-qty" data-item-id="${item.id}">-</button>
                                 <span>${item.quantity}</span>
-                                <button>+</button>
+                                <button class="increase-qty" data-item-id="${item.id}">+</button>
                             </div>
                             <span class="remove-item" data-item-id="${item.id}">Remove</span>
                         `;
@@ -171,20 +179,65 @@
                 }
                 cartSubtotalElement.textContent = `P${subtotal.toFixed(2)}`;
 
-                // Add event listeners for remove, increase, and decrease quantity here
+                // Add event listeners for remove, increase, and decrease quantity
                 document.querySelectorAll('.remove-item').forEach(button => {
                     button.addEventListener('click', function() {
                         const itemId = this.dataset.itemId;
-                        console.log('Remove item:', itemId);
-                        // Implement your remove from cart logic
+                        removeFromCart(itemId);
                     });
                 });
 
-                // Implement increase/decrease quantity logic similarly
+                document.querySelectorAll('.decrease-qty').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const itemId = this.dataset.itemId;
+                        decreaseQuantity(itemId);
+                    });
+                });
+
+                document.querySelectorAll('.increase-qty').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const itemId = this.dataset.itemId;
+                        increaseQuantity(itemId);
+                    });
+                });
             }
 
+            // Function to remove an item from the cart
+            function removeFromCart(itemId) {
+                let cart = getCart();
+                cart = cart.filter(item => item.id !== itemId);
+                saveCart(cart);
+                updateCartDisplay();
+            }
+
+            // Function to increase the quantity of an item in the cart
+            function increaseQuantity(itemId) {
+                let cart = getCart();
+                const item = cart.find(item => item.id === itemId);
+                if (item) {
+                    item.quantity++;
+                    saveCart(cart);
+                    updateCartDisplay();
+                }
+            }
+
+            // Function to decrease the quantity of an item in the cart
+            function decreaseQuantity(itemId) {
+                let cart = getCart();
+                const item = cart.find(item => item.id === itemId);
+                if (item && item.quantity > 1) {
+                    item.quantity--;
+                    saveCart(cart);
+                    updateCartDisplay();
+                } else if (item && item.quantity === 1) {
+                    removeFromCart(itemId);
+                }
+            }
+
+            // Initialize the cart display
             updateCartDisplay();
 
+            // Redirect to checkout page
             checkoutButton.addEventListener('click', function() {
                 window.location.href = 'checkout.html';
             });
