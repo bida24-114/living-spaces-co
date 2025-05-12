@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In | Living Spaces Co.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 400px;
+            max-width: 100%;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            color: #555;
+            font-size: 0.9em;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 1em;
+        }
+
+        button {
+            background-color: #f5f5dc; /* Beige */
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #e8e8d4; /* Darker beige */
+        }
+
+        .form-footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #777;
+            font-size: 0.9em;
+        }
+
+        .form-footer a {
+            color: #f5f5dc; /* Beige */
+            text-decoration: none;
+        }
+        .form-footer a:hover{
+            color: #e8e8d4; /* Darker beige */
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+            margin-top: 10px;
+            display: none; /* Initially hidden */
+        }
+        .error-message.show{
+            display: block;
+        }
+
+        /* Sign In Specific Styles */
+        #signin-form h2 {
+            color: #333;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="signin-form">
+            <h2>Sign In</h2>
+            <div class="form-group">
+                <label for="signin-username">Username</label>
+                <input type="text" id="signin-username" name="signin-username" placeholder="Enter your username">
+            </div>
+            <div class="form-group">
+                <label for="signin-password">Password</label>
+                <input type="password" id="signin-password" name="signin-password" placeholder="Enter your password">
+            </div>
+            <button type="submit">Sign In</button>
+            <div class="form-footer">
+                <a href="signup.html" id="go-to-signup">Don't have an account? Sign Up</a>
+            </div>
+             <div id="signin-error" class="error-message"></div>
+        </form>
+
+
+    </div>
+
+    <script>
+        const signinForm = document.getElementById('signin-form');
+        const signinError = document.getElementById('signin-error');
+
+
+        signinForm.addEventListener('submit', (event) => {
+            event.preventDefault();
+            const username = event.target.elements['signin-username'].value.trim();
+            const password = event.target.elements['signin-password'].value.trim();
+
+            if (username === '' || password === '') {
+                signinError.textContent = "Please fill in all fields.";
+                signinError.classList.add('show');
+            } else {
+                // Simulate successful sign-in (replace with actual authentication logic)
+                console.log('Signing in with:', username, password);
+                alert(`Welcome ${username}! (Simulated login)`);
+                signinError.classList.remove('show');
+                //window.location.href = 'index.html'; // Redirect to home page
+            }
+        });
+
+
+
+    </script>
+</body>
+</html>
 
