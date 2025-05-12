@@ -11,7 +11,6 @@
     sign in
 
   <style>
-        /* General Styles */
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #f4f4f4;
@@ -63,7 +62,7 @@
         }
 
         button {
-            background-color: #f5f5dc; /* Beige */
+            background-color: #f5f5dc; 
             color: #333;
             border: none;
             padding: 10px 20px;
@@ -75,7 +74,7 @@
         }
 
         button:hover {
-            background-color: #e8e8d4; /* Darker beige */
+            background-color: #e8e8d4; 
         }
 
         .form-footer {
@@ -86,30 +85,27 @@
         }
 
         .form-footer a {
-            color: #f5f5dc; /* Beige */
+            color: #f5f5dc; 
             text-decoration: none;
         }
         .form-footer a:hover{
-            color: #e8e8d4; /* Darker beige */
+            color: #e8e8d4; 
         }
 
         .error-message {
             color: red;
             font-size: 0.9em;
             margin-top: 10px;
-            display: none; /* Initially hidden */
+            display: none; 
         }
         .error-message.show{
             display: block;
         }
 
-        /* Sign In Specific Styles */
         #signin-form h2 {
             color: #333;
         }
-
-
-    </style>
+  </style>
     <body>
     <header>
         <h1 class="hero-text">Discover Your Dream Home</h1>
@@ -142,8 +138,6 @@
             </div>
              <div id="signin-error" class="error-message"></div>
         </form>
-
-
     </div>
 
     <script>
@@ -160,11 +154,11 @@
                 signinError.textContent = "Please fill in all fields.";
                 signinError.classList.add('show');
             } else {
-                // Simulate successful sign-in (replace with actual authentication logic)
+                
                 console.log('Signing in with:', username, password);
-                alert(`Welcome ${username}! (Simulated login)`);
+                alert(`Welcome ${username}! (Login successful)`);
                 signinError.classList.remove('show');
-                //window.location.href = 'index.html'; // Redirect to home page
+                
             }
         });
 
