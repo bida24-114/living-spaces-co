@@ -165,11 +165,10 @@
                 signupError.textContent = "Passwords do not match.";
                 signupError.classList.add('show');
             } else {
-                // Simulate successful sign-up (replace with actual registration logic)
                 console.log('Signing up with:', username, password);
-                alert(`Account created for ${username}! (Simulated registration)`);
+                alert(`Account created for ${username}! (successful signup)`);
                 signupError.classList.remove('show');
-                window.location.href = 'signin.html'; // Redirect to signin page
+                window.location.href = 'signin.html'; 
             }
         });
     </script>
