@@ -8,14 +8,6 @@ body {
     min-height: 100vh;
 }
 
-html.homepage, body.homepage {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
 main {
     flex: 1;
     overflow: hidden;
