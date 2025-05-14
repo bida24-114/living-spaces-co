@@ -12,20 +12,15 @@
     <header>
         <h1 class="hero-text">Discover Your Dream Home</h1>
     </header>
-    <<nav class="navbar">
-    <div class="nav-brand"></div>
-    <button class="nav-toggle" id="navToggle">
-        <i class="fas fa-bars"></i>
-    </button>
-        <div class="nav-links" id="navLinks">
+<button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+        <div class="nav-links">
         <a href="index.html">Home</a>
         <a href="product.html">Shop</a>
         <a href="about.html">About Us</a>
         <a href="contact.html">Contact Us</a>
         <a href="reviews.html">Customer Reviews</a>
         <a href="cart.html"<i class="fas fa-shopping-cart"></i></a>
-       
-    </nav>
+        </div>
     <main>
         <section id="hero">
           <img src="hero.jpeg" alt="Living Spaces Co. Logo" class="hero-image">
@@ -38,15 +33,16 @@
     <footer>
         <p>&copy; 2025 Living Spaces Co. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
     </footer>
-        <script>
-    const toggle = document.getElementById('navToggle');
-    const links = document.getElementById('navLinks');
+    <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggleButton = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-    toggle.addEventListener('click', () => {
-        links.classList.toggle('show');
+    toggleButton.addEventListener('click', function () {
+      navLinks.classList.toggle('show');
     });
-</script>
-
+  });
+</script>  
 </body>
 
 </html>
