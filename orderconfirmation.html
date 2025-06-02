@@ -16,7 +16,7 @@
        <a href="index.html">Home</a>
         <a href="product.html">Shop</a>
         <a href="about.html">About Us</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="feedback.html">Contact Us</a>
         <a href="reviews.html">Customer Reviews</a>
         <a href="cart.html"><i class="fas fa-shopping-cart"></i></a>
         
@@ -49,16 +49,6 @@
             const orderedItemsElement = document.getElementById('ordered-items');
             const shippingAddressElement = document.getElementById('shipping-address');
             const orderTotalElement = document.getElementById('order-total');
-
-            // In a real application, you would retrieve the actual order details
-            // from your server or local storage after the checkout process.
-            // The data below is for example purposes.
-            const orderData = {
-                orderNumber: 'LS-2025-0415-001',
-                items: 'Stainless Steel Single Bowl Sink, Modern Two-Slice Toaster (2)',
-                shippingAddress: 'Orapa, Central District, Botswana',
-                total: 'P1610.00'
-            };
 
             orderNumberElement.textContent = orderData.orderNumber;
             orderedItemsElement.textContent = orderData.items;
